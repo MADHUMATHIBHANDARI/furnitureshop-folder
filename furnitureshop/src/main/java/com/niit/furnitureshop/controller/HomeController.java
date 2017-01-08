@@ -37,6 +37,7 @@ public class HomeController {
 	@RequestMapping(value="register/add", method=RequestMethod.POST)
 	public String addUser(Model model, @ModelAttribute("user")User user)
 	{
+		user.setRole("ROLE_USER");
 		userDAO.addUser(user);
 		return "redirect:/";
 	}

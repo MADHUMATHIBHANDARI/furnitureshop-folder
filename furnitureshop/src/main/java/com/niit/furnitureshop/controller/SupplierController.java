@@ -27,11 +27,12 @@ public class SupplierController{
 	@Autowired
 	Supplier supplier;
 	
- @RequestMapping("/supplier")
+ /*@RequestMapping("/supplier")
 public String getSupplier()
 {
 	return "supplier";
-	}
+	}*/
+ 
 	@RequestMapping("/supplier")
 public ModelAndView getRegister(Model m)
 {
