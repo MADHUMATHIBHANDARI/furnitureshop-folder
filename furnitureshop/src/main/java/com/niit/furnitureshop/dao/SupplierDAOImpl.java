@@ -45,7 +45,7 @@ public class SupplierDAOImpl implements SupplierDAO
 	@Transactional
 	public Supplier getSupplier(String id)
 	{
-		String hql="from Supplier where Sid="+"'"+id+"'";
+		String hql="from Supplier where sid="+"'"+id+"'";
 		@SuppressWarnings("deprecation")
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
@@ -61,7 +61,7 @@ public class SupplierDAOImpl implements SupplierDAO
 	@Transactional
 	public Supplier getByName(String name)
 	{
-		String hql="from Supplier where c_Name="+"'"+ name +"'";
+		String hql="from Supplier where sname="+"'"+ name +"'";
 		@SuppressWarnings("rawtypes")
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")

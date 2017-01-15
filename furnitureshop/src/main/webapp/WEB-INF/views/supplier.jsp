@@ -83,7 +83,7 @@ font-family: "Times New Roman", Times, serif;
 <c:url var="addAction"  value="/supplier/add"></c:url>
 
 <%-- form:form action="${addAction }" commandName="supplier"--%>
-<form:form method="POST" commandName="Supplier" action="supplier/add">
+<form:form method="POST" commandName="supplier" action="${addAction}">
 <table class="table table-condensed">
 	<tr bgcolor=#F0F8FF>
 		<td><form:label style="color:#000000" path="sid"><spring:message text="ID"/></form:label></td>
@@ -121,7 +121,7 @@ font-family: "Times New Roman", Times, serif;
 									<input style= "align:middle" class="btn btn-primary btn-md" type="submit" value="<spring:message text="Edit Supplier"/>"/>
 								</c:if>
 								<c:if test="${empty supplier.sname }">
-									<input style= "align:middle"  class="btn btn-primary btn-md" type="submit" value="<spring:message text="Add Category"/>"/>
+									<input style= "align:middle"  class="btn btn-primary btn-md" type="submit" value="<spring:message text="Add Supplier"/>"/>
 								</c:if>
 				</td>
 				</tr>

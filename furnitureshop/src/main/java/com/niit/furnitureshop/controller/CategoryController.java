@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.furnitureshop.dao.CategoryDAO;
+import com.niit.furnitureshop.dao.UserDAO;
 import com.niit.furnitureshop.model.Category;
-import com.niit.furnitureshop.model.Product;
+import com.niit.furnitureshop.model.User;
 
 
 @Controller
@@ -22,15 +23,15 @@ public class CategoryController{
 	
 	@Autowired
 	Category category;
-	@RequestMapping("/category")
-	public ModelAndView getRegister(Model m)
-	{
-		m.addAttribute("category",new Product());
-		ModelAndView model = new ModelAndView("category");
-		
-		return model;
-		
-	}
+//	@RequestMapping("/category")
+//	public ModelAndView getRegister(Model m)
+//	{
+//		m.addAttribute("category",new Category());
+//		ModelAndView model = new ModelAndView("category");
+//		
+//		return model;
+//		
+//	}
  
 	@RequestMapping(value="category/add", method=RequestMethod.POST)
 	public String addUser(Model model, @ModelAttribute("category") Category category)
@@ -59,7 +60,7 @@ public String deleteCategory(@PathVariable("cid") String id, ModelMap model) thr
 public String editCategory(@PathVariable("cid") String id, Model model) {
 	System.out.println("editCategory");
 	model.addAttribute("category", this.categoryDAO.getCategory(id));
-	model.addAttribute("listCategory", this.categoryDAO.list());
+	model.addAttribute("categoryList", this.categoryDAO.list());
 	return "category";
 }
 

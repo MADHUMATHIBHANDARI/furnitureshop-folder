@@ -43,7 +43,7 @@ public class CategoryDAOImpl implements CategoryDAO
 	@Transactional
 	public Category getCategory(String id)
 	{
-		String hql="from Category where c_ID="+"'"+id+"'";
+		String hql="from Category where cid="+"'"+id+"'";
 		@SuppressWarnings("deprecation")
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
@@ -75,7 +75,7 @@ public class CategoryDAOImpl implements CategoryDAO
 	@Transactional
 	public List<Category> list()
 	{
-		@SuppressWarnings("unchecked")
+		//@SuppressWarnings("unchecked")
 		List<Category> list= (List<Category>) sessionFactory.getCurrentSession().createCriteria(Category.class).setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
 		return list;
 				

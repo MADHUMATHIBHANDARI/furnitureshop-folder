@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.furnitureshop.dao.SupplierDAO;
+import com.niit.furnitureshop.dao.UserDAO;
 import com.niit.furnitureshop.model.Supplier;
+import com.niit.furnitureshop.model.User;
 
 
 
@@ -33,15 +35,15 @@ public String getSupplier()
 	return "supplier";
 	}*/
  
-	@RequestMapping("/supplier")
-public ModelAndView getRegister(Model m)
-{
-	m.addAttribute("supplier",new Supplier());
-		ModelAndView model = new ModelAndView("Supplier");
-		
-	return model;
-		
-	}
+//	@RequestMapping("/supplier")
+//public ModelAndView getRegister(Model m)
+//{
+//	m.addAttribute("supplier",new Supplier());
+//		ModelAndView model = new ModelAndView("Supplier");
+//		
+//	return model;
+//		
+//	}
 	@RequestMapping(value="supplier/add", method=RequestMethod.POST)
 	public String addUser(Model model, @ModelAttribute("supplier") Supplier supplier)
 	{
@@ -73,7 +75,7 @@ public ModelAndView getRegister(Model m)
 	
 	
 		@RequestMapping(value = "/supplier", method = RequestMethod.GET)
-		public String listCategories(Model model){
+		public String listSupplier(Model model){
 			model.addAttribute("supplier", supplier);
 			model.addAttribute("supplierList",this.supplierDAO.list());
 			return "supplier";

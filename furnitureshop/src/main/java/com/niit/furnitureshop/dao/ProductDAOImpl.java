@@ -59,7 +59,7 @@ public class ProductDAOImpl implements ProductDAO
 	@Transactional
 	public Product getByName(String name)
 	{
-		String hql="from Product where c_Name="+"'"+ name +"'";
+		String hql="from Product where pname="+"'"+ name +"'";
 		@SuppressWarnings("rawtypes")
 		Query query=sessionFactory.getCurrentSession().createQuery(hql);
 		@SuppressWarnings("unchecked")
