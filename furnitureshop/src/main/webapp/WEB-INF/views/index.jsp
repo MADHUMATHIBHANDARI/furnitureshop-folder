@@ -28,23 +28,29 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="aboutus.jsp">About Us</a></li>
           <li><a href="#">Contact Us</a></li>
            <li class="divider-vertical"></li>
        <c:if test="${pageContext.request.userPrincipal.name != null}">
       <c:if test="${pageContext.request.userPrincipal.name != 'madhu'}">
       <li><a  href="<c:url value="/myCart" />"><span class="glyphicon glyphicon-shopping-cart"></span> CART</a>${cartSize}</li>
       </c:if>
+        </ul>
+       <ul class="nav navbar-nav navbar-right">
       <c:if test="${pageContext.request.userPrincipal.name  == 'madhu'}">
        <li><a style="color:#F5F5DC" href="<c:url value="/admin" />">VIEW ALL</a></li>
        </c:if>
        <li><a style="color:#F5F5DC">HELLO, ${pageContext.request.userPrincipal.name}</a></li>
        <li><a  style="color:#F5F5DC;margin:0px 0px 0px 0px" href="<c:url value="/j_spring_security_logout" />"> <span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
        </c:if>
+       </ul>
+        <ul class="nav navbar-nav navbar-right">
        <c:if test="${pageContext.request.userPrincipal.name  == null}">
        <li><a  style="color:#F5F5DC;margin:0px 0px 0px 0px" href="<c:url value="/login" />"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
        <li><a  style="color:#F5F5DC;margin:0px 0px 0px 0px" href="<c:url value="register" />"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+     
        </c:if>
+        </ul>
         </ul>
      
     

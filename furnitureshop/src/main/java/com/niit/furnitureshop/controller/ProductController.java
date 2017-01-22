@@ -5,9 +5,10 @@ package com.niit.furnitureshop.controller;
 
 
 import java.io.File;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import javax.persistence.criteria.Path;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -91,7 +92,7 @@ public class ProductController{
 
 		MultipartFile file =product.getImage();
 		String rootDirectory=request.getSession().getServletContext().getRealPath("/");
-		path=(Path) Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+product.getPid()+".jpg");
+		path=Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\"+product.getPid()+".jpg");
 		
 		if(file!=null &&!file.isEmpty())
 		{

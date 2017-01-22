@@ -83,7 +83,7 @@ font-family: "Times New Roman", Times, serif;
 <c:url var="addAction"  value="/product/add"></c:url>
 
 <%-- form:form action="${addAction }" commandName="product"--%>
-<form:form method="POST" commandName="product" action="${addAction}">
+<form:form method="POST" commandName="product" action="${addAction}" enctype="multipart/form-data">
 <table class="table table-condensed">
 	<tr bgcolor=#F0F8FF>
 		<td><form:label style="color:#000000" path="pid"><spring:message text="ID"/></form:label></td>

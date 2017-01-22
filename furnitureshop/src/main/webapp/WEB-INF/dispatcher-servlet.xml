@@ -29,7 +29,18 @@
 <mvc:annotation-driven/>
 
 
+<!-- multipart initialization -->
 
+
+
+<bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">
+
+<!-- setting maximum upload size -->
+
+
+<property name="maxUploadSize" value="10000000"/>
+
+</bean>
 
 
 </beans>

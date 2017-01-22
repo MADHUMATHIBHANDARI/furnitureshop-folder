@@ -1,5 +1,6 @@
 C:\Users\MRuser\Desktop\furnitureshop\src\main\java\com\niit\furnitureshop\controller\CategoryController.java
 C:\Users\MRuser\Desktop\furnitureshop\src\main\java\com\niit\furnitureshop\dao\ProductDAOImpl.java
+C:\Users\MRuser\Desktop\furnitureshop\src\main\java\com\niit\furnitureshop\model\Cart.java
 C:\Users\MRuser\Desktop\furnitureshop\src\main\java\com\niit\furnitureshop\dao\CategoryDAO.java
 C:\Users\MRuser\Desktop\furnitureshop\src\main\java\com\niit\furnitureshop\controller\ProductController.java
 C:\Users\MRuser\Desktop\furnitureshop\src\main\java\com\niit\furnitureshop\dao\SupplierDAO.java
@@ -19,3 +20,4 @@ C:\Users\MRuser\Desktop\furnitureshop\src\main\java\com\niit\furnitureshop\model
 C:\Users\MRuser\Desktop\furnitureshop\src\main\java\com\niit\furnitureshop\test\CategoryTest.java
 C:\Users\MRuser\Desktop\furnitureshop\src\main\java\com\niit\furnitureshop\model\Supplier.java
 C:\Users\MRuser\Desktop\furnitureshop\src\main\java\com\niit\furnitureshop\test\SupplierTest.java
+C:\Users\MRuser\Desktop\furnitureshop\src\main\java\com\niit\furnitureshop\util\Util.java

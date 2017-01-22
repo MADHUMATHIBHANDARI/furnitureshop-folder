@@ -7,9 +7,14 @@
 <title>Administrator</title>
 </head>
 <body>
-<a href="category">Categories</a><br><hr>
-<a href="product">Products</a><br><hr>
-<a href="supplier">Supplier</a><br><hr>
+<div class="btn-group">
+  <button type="button" class="btn btn-primary"><a href="category">Categories</a><br></button>
+  <button type="button" class="btn btn-primary"><a href="product">Products</a><br></button>
+  <button type="button" class="btn btn-primary"><a href="supplier">Supplier</a><br></button>
+</div>
+
+
+
 
 </body>
 </html>

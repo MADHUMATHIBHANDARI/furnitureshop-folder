@@ -18,6 +18,7 @@ import com.niit.furnitureshop.dao.SupplierDAO;
 import com.niit.furnitureshop.dao.UserDAO;
 import com.niit.furnitureshop.model.Supplier;
 import com.niit.furnitureshop.model.User;
+import com.niit.furnitureshop.util.Util;
 
 
 
@@ -47,6 +48,9 @@ public String getSupplier()
 	@RequestMapping(value="supplier/add", method=RequestMethod.POST)
 	public String addUser(Model model, @ModelAttribute("supplier") Supplier supplier)
 	{
+		Util util=new Util();
+		String id=util.removeComma(supplier.getSid());
+	  supplier.setSid(id);
 		supplierDAO.addSupplier(supplier);
 	return "redirect:/supplier";
 	}

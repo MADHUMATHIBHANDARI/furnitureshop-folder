@@ -11,7 +11,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <meta http-eqiv="Content-type" content="text/html; charset=ISO-8859-1">
-<title>Category </title>
+<title>Product </title>
 <script type="text/javascript" src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
 
 <style>
@@ -83,7 +83,7 @@ font-family: "Times New Roman", Times, serif;
 <c:url var="addAction"  value="/product/add"></c:url>
 
 <%-- form:form action="${addAction }" commandName="product"--%>
-<form:form method="POST" commandName="Category" action="product/add">
+<form:form method="POST" commandName="product" action="${addAction}" enctype="multipart/form-data">
 <table class="table table-condensed">
 	<tr bgcolor=#F0F8FF>
 		<td><form:label style="color:#000000" path="pid"><spring:message text="ID"/></form:label></td>
@@ -100,7 +100,7 @@ font-family: "Times New Roman", Times, serif;
 				</tr>
 				
 				<tr bgcolor="#F0F8FF"> 
-				<form:input path="cid" hidden="true"/>
+				<form:input path="pid" hidden="true"/>
 				
 				<td><form:label style="color:#000000" path="pname"> <spring:message text="NAME"/></form:label></td>
         		<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="pname" required="true" /></td> 
@@ -111,8 +111,24 @@ font-family: "Times New Roman", Times, serif;
         		<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="pprice" required="true" /></td> 
 				</tr>
 				
-			
+			<tr bgcolor="#F0F8FF">
+				<td><form:label style="color:#000000" path="pdescription"> <spring:message text="DESCRIPTION"/></form:label></td>
+        		<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="pdescription" required="true" /></td> 
+				</tr>
 				
+				<tr bgcolor=#F0F8FF>
+				<td><form:label style="color:#000000" path="supplier_id" ><spring:message text="SUPPLIER"/></form:label></td>
+				<td><form:select style="background-color:#F5F5DC" path="supplier.sname" items="${supplierList}" itemValue="sname" itemLabel="sname"/></td>
+				</tr>
+				<tr bgcolor=#F0F8FF>
+				<td><form:label style="color:#000000" path="category_id" ><spring:message text="CATEGORY"/></form:label></td>
+				<td><form:select style="background-color:#F5F5DC" path="category.cname" items="${categoryList}" itemValue="cname" itemLabel="cname"/></td>
+				</tr>
+				
+				<tr bgcolor=#F0F8FF>
+				<td><form:label style="color:#000000"  path="image" ><spring:message text="image"/></form:label></td>
+				<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" type="file" path="image" /></td>
+				</tr>
 				<tr bgcolor="#F0F8FF">
 				<td align="right" colspan="2"><c:if test="${!empty product.pname }">
 									<input style= "align:middle" class="btn btn-primary btn-md" type="submit" value="<spring:message text="Edit Product"/>"/>
@@ -139,6 +155,10 @@ font-family: "Times New Roman", Times, serif;
 				<th style="color:black" width="125" bgcolor="#F0F8FF" align="center">PRODUCT ID</th>
 				<th style="color:black" width="125" align="center">PRODUCT NAME</th>
 				<th style="color:black" width="190" align="center">PRODUCT PRICE</th>
+				<th style="color:black" width="190" align="center">PRODUCT DESCRIPTION</th>
+				<th style="color:black" width="190" align="center">PRODUCT CATEGORY</th>
+				<th style="color:black" width="190" align="center">PRODUCT SUPPLIER</th>
+				<th style="color:black" width="190" align="center">PRODUCT IMAGE</th>
 				<th style="color:black" width="100" align="center">EDIT</th>
 				<th style="color:black" width="100" align="center">DELETE</th>
 			</tr>
@@ -147,6 +167,11 @@ font-family: "Times New Roman", Times, serif;
 					<td  style="color:#000000;font-size:120%" align="center">${product.pid}</td>
 					<td  style="color:#000000;font-size:120%" align="center">${product.pname}</td>
 					<td style="color:#000000;font-size:120%" align="center">${product.pprice}</td>
+					<td style="color:#000000;font-size:120%" align="center">${product.pdescription}</td>
+					<td style="color:#000000;font-size:120%" align="center">${product.category.cname}</td>
+					<td style="color:#000000;font-size:120%" align="center">${product.supplier.sname}</td>
+					<td style="color:#000000;font-size:120%" align="center"><img src="<c:url value="/resources/images/${product.pid}.jpg"/>"></img></td>
+					
 					<td style="color:#000000;font-size:120%" align="center"><a href="<c:url value='product/edit/${product.pid}' />"><button type="button" class="btn btn-warning">Edit</button></a></td>
 					<td style="color:#000000;font-size:120%" align="center"><a href="<c:url value='product/remove/${product.pid}' />"><button type="button" class="btn btn-danger">Delete</button></a></td>
 				</tr>

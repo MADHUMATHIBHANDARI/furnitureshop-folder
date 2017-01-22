@@ -83,7 +83,7 @@ font-family: "Times New Roman", Times, serif;
 <c:url var="addAction"  value="/category/add"></c:url>
 
 <%-- form:form action="${addAction }" commandName="category"--%>
-<form:form method="POST" commandName="Category" action="category/add">
+<form:form method="POST" commandName="category" action="${addAction}">
 <table class="table table-condensed">
 	<tr bgcolor=#F0F8FF>
 		<td><form:label style="color:#000000" path="cid"><spring:message text="ID"/></form:label></td>
@@ -103,11 +103,11 @@ font-family: "Times New Roman", Times, serif;
 				<form:input path="cid" hidden="true"/>
 				
 				<td><form:label style="color:#000000" path="cname"> <spring:message text="NAME"/></form:label></td>
-        		<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="c_Name" required="true" /></td> 
+        		<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="cname" required="true" /></td> 
 				</tr>
 				
 				<tr bgcolor="#F0F8FF">
-				<td><form:label style="color:#000000" path="cdescription" ><spring:message text="DESCRIPTION"/></form:label></td>
+				<td><form:label style="color:#000000" path="cdesc" ><spring:message text="DESCRIPTION"/></form:label></td>
 				<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="cdesc" required="true"/></td>
 				</tr>
 				

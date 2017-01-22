@@ -14,6 +14,7 @@ import com.niit.furnitureshop.dao.CategoryDAO;
 import com.niit.furnitureshop.dao.UserDAO;
 import com.niit.furnitureshop.model.Category;
 import com.niit.furnitureshop.model.User;
+import com.niit.furnitureshop.util.Util;
 
 
 @Controller
@@ -36,6 +37,9 @@ public class CategoryController{
 	@RequestMapping(value="category/add", method=RequestMethod.POST)
 	public String addUser(Model model, @ModelAttribute("category") Category category)
 	{
+		Util util=new Util();
+		String id=util.removeComma(category.getCid());
+	    category.setCid(id);
 		categoryDAO.addCategory(category);
 		return "redirect:/category";
 	}

@@ -1,8 +1,10 @@
 com\niit\furnitureshop\controller\HomeController.class
 com\niit\furnitureshop\test\UserTest.class
 com\niit\furnitureshop\dao\CategoryDAO.class
+com\niit\furnitureshop\util\Util.class
 com\niit\furnitureshop\controller\SupplierController.class
 com\niit\furnitureshop\dao\SupplierDAOImpl.class
+com\niit\furnitureshop\model\Cart.class
 com\niit\furnitureshop\controller\CategoryController.class
 com\niit\furnitureshop\test\CategoryTest.class
 com\niit\furnitureshop\dao\ProductDAOImpl.class
