@@ -79,8 +79,8 @@ public class CartController
 		
 	}
 	
-	@RequestMapping(value = "cart/add/{p_id}", method = RequestMethod.GET)
-	public String addToCart(@PathVariable("p_id") String id, HttpServletRequest request ,Principal principal)
+	@RequestMapping(value = "cart/add/{pid}", method = RequestMethod.GET)
+	public String addToCart(@PathVariable("pid") String id, HttpServletRequest request ,Principal principal)
 	{
 		try
 		{

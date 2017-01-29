@@ -29,7 +29,7 @@ background-size:     cover;
     <div class="container">
         <div class="row">
             <div class="col-xs-2 col-md-3" style="color:#EEE8AA;margin:0px 100px 0px 100px">
-               <a style="color:#EEE8AA;font-size:2.0em" href="onLoad"><span class="glyphicon glyphicon-home"></span></a>
+               <a style="color:#EEE8AA;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
             </div>
             <div class="col-xs-4 col-md-8">
             

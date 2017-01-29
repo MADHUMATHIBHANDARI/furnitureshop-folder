@@ -19,14 +19,17 @@ body
 background-image: url(resources/images/bgk19.jpg); 
 background-size:     cover;                      
     background-repeat:   no-repeat;
+    background-color: yellow;
+   
  } 
-
+ 
 </style>
 <body>
-
+ 
    <div style="color:#000000;margin:40px 0px 0px 100px">
-    <a style="color:#000000;font-size:2.0em" href="onLoad"><span class="glyphicon glyphicon-home"></span></a>
+    <a style="color:#000000;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
    </div>
+   <CENTER><h1>LOGIN FORM</h1></CENTER> 
    <div class="container" style="align:center; margin: 150px 0px 0px 150px">
    <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-4 col-md-offset-3">
@@ -35,6 +38,7 @@ background-size:     cover;
        <c:if test="${not empty loginerror}">
        <p class="loginerror" >${loginerror}</p>
        </c:if>
+       
        
        <c:if test="${not empty loginmsg}">
        <p class="loginmsg" >${loginmsg}</p>
@@ -45,6 +49,7 @@ background-size:     cover;
 				<div class="col-sm-12 ">
 					<div class="form-group">
 						<input style="background-color:#FFFFE0" type="text"  name="username" id="name" class="form-control input-lg" placeholder="Name" tabindex="1" />
+						 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>  
 					</div>
 				</div>
 			
@@ -54,17 +59,23 @@ background-size:     cover;
 				<div class="col-xs-12">
 					<div class="form-group">
 						<input style="background-color:#FFFFE0" type="password"  name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="2" />
+						  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
 					</div>
 				</div>
+				<div class="col-sm-12 ">
+			   <div class="checkbox">
+           <label><input type="checkbox"> Remember me</label>
+            </div>
 			
 				
 			</div>
-			<hr class="colorgraph"> 
+			<hr class="colorgraph">
+			<div class="col-sm-12 "> 
  			<div class="row">
 				<div class="col-xs-12 col-md-6"><input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
 				
 			</div>
-
+			
 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 
 			

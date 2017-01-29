@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container">
-  <h2>Sign Up Form</h2>
+  <center><h2>Sign Up Form</h2></center>
   <form:form method="POST" commandName="user" action="register/add">
    <div class="form-group">
     <label for="name"> Name:</label>

@@ -32,7 +32,7 @@ table, th, td {
    
     
 }
-/* .btn {
+/*.btn {
     background-color:#cc0052 ;
     } */
 h2{
@@ -86,7 +86,7 @@ font-family: "Times New Roman", Times, serif;
 <form:form method="POST" commandName="supplier" action="${addAction}">
 <table class="table table-condensed">
 	<tr bgcolor=#F0F8FF>
-		<td><form:label style="color:#000000" path="sid"><spring:message text="ID"/></form:label></td>
+		<td><form:label style="color:#00000" path="sid"><spring:message text="ID"/></form:label></td>
 		
 		
 		<c:choose>

@@ -22,7 +22,7 @@ background-size:     cover;
  } 
  th{
     color:white;
-    background-color:#F0F8FF;
+    background-color:#DEB887;
     align:center;
 }
 
@@ -49,24 +49,24 @@ font-family: "Times New Roman", Times, serif;
 </style>
 </head>
 <body >
-<nav class="navbar navbar-inverse" style="margin: 20px 0px 0px 0px;background-color:#20B2AA">
+<nav class="navbar navbar-inverse" style="margin: 20px 0px 0px 0px;background-color:#D8BFD8">
   <div class="container-fluid">
     <div class="navbar-header">
-      <h2 class="navbar-brand" style="color:#F5F5DC;margin:5px 0px 0px 0px">FURNITURES</h2>
+      <h2 class="navbar-brand" style="color:#0000FF;margin:5px 0px 0px 0px">FURNITURES</h2>
     </div>
     <ul class="nav navbar-nav">
-      <li><a style="color:#F5F5DC;margin:5px 0px 0px 0px" href="admin"><span class="glyphicon glyphicon-home"></span></a></li>
+      <li><a style="color:#0000FF;margin:5px 0px 0px 0px" href="admin"><span class="glyphicon glyphicon-home"></span></a></li>
      
      </ul>
       <ul class="nav navbar-nav" style="text-align:center">   
-       <li><h1 style="color:#F5F5DC;margin:5px 0px 0px 400px" ><center>PRODUCTS</center></h1></li>
+       <li><h1 style="color:#0000FF;margin:5px 0px 0px 400px" ><center>PRODUCTS</center></h1></li>
            		
 	 </ul>
      <ul class="nav navbar-nav navbar-right">       
       <li class="divider-vertical"></li>
 		<c:if test="${pageContext.request.userPrincipal.name != null}"> 		
-			  <li><h4 class="text-right" style="color:#F5F5DC;margin:20px 0px 0px 0px">HELLO, ${pageContext.request.userPrincipal.name}</h4></li>
-			<li><a  style="color:#F5F5DC;margin:5px 0px 0px 0px" href="<c:url value="/j_spring_security_logout" />"> <span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+			  <li><h4 class="text-right" style="color:#0000FF;margin:20px 0px 0px 0px">HELLO, ${pageContext.request.userPrincipal.name}</h4></li>
+			<li><a  style="color:#0000FF;margin:5px 0px 0px 0px" href="<c:url value="/j_spring_security_logout" />"> <span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
 		</c:if>    
 								
      </ul>     
@@ -85,7 +85,7 @@ font-family: "Times New Roman", Times, serif;
 <%-- form:form action="${addAction }" commandName="product"--%>
 <form:form method="POST" commandName="product" action="${addAction}" enctype="multipart/form-data">
 <table class="table table-condensed">
-	<tr bgcolor=#F0F8FF>
+	<tr bgcolor=#DEB887>
 		<td><form:label style="color:#000000" path="pid"><spring:message text="ID"/></form:label></td>
 		
 		
@@ -94,47 +94,47 @@ font-family: "Times New Roman", Times, serif;
 				<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="pid" disabled="true" readonly="true"/></td>
 			</c:when>
 			<c:otherwise>
-				<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="pid"  pattern=".{4,7}" required="true" title="id should be between 4 to 7 characters"/></td>
+				<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="pid"  pattern=".{4,7}" required="true" title="id should be between 2 to 4 characters"/></td>
 				</c:otherwise>
 				</c:choose>
 				</tr>
 				
-				<tr bgcolor="#F0F8FF"> 
+				<tr bgcolor="#DEB887"> 
 				<form:input path="pid" hidden="true"/>
 				
 				<td><form:label style="color:#000000" path="pname"> <spring:message text="NAME"/></form:label></td>
         		<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="pname" required="true" /></td> 
 				</tr>
 				
-				<tr bgcolor="#F0F8FF">
+				<tr bgcolor="#DEB887">
 				<td><form:label style="color:#000000" path="pprice"> <spring:message text="PRICE"/></form:label></td>
         		<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="pprice" required="true" /></td> 
 				</tr>
 				
-			<tr bgcolor="#F0F8FF">
+			<tr bgcolor="#DEB887">
 				<td><form:label style="color:#000000" path="pdescription"> <spring:message text="DESCRIPTION"/></form:label></td>
         		<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="pdescription" required="true" /></td> 
 				</tr>
 				
-				<tr bgcolor=#F0F8FF>
+				<tr bgcolor=#DEB887>
 				<td><form:label style="color:#000000" path="supplier_id" ><spring:message text="SUPPLIER"/></form:label></td>
 				<td><form:select style="background-color:#F5F5DC" path="supplier.sname" items="${supplierList}" itemValue="sname" itemLabel="sname"/></td>
 				</tr>
-				<tr bgcolor=#F0F8FF>
+				<tr bgcolor=#DEB887>
 				<td><form:label style="color:#000000" path="category_id" ><spring:message text="CATEGORY"/></form:label></td>
 				<td><form:select style="background-color:#F5F5DC" path="category.cname" items="${categoryList}" itemValue="cname" itemLabel="cname"/></td>
 				</tr>
 				
-				<tr bgcolor=#F0F8FF>
+				<tr bgcolor=#DEB887>
 				<td><form:label style="color:#000000"  path="image" ><spring:message text="image"/></form:label></td>
 				<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" type="file" path="image" /></td>
 				</tr>
-				<tr bgcolor="#F0F8FF">
+				<tr bgcolor="#DEB887">
 				<td align="right" colspan="2"><c:if test="${!empty product.pname }">
-									<input style= "align:middle" class="btn btn-primary btn-md" type="submit" value="<spring:message text="Edit Product"/>"/>
+									<input style= "align:middle" class="btn btn-warning btn-md" type="submit" value="<spring:message text="Edit Product"/>"/>
 								</c:if>
 								<c:if test="${empty product.pname }">
-									<input style= "align:middle"  class="btn btn-primary btn-md" type="submit" value="<spring:message text="Add Product"/>"/>
+									<input style= "align:middle"  class="btn btn-success btn-md" type="submit" value="<spring:message text="Add Product"/>"/>
 								</c:if>
 				</td>
 				</tr>
@@ -150,9 +150,9 @@ font-family: "Times New Roman", Times, serif;
 <h3><center>Product LIST</center></h3>
 <br>
 <c:if test="${!empty productList}">
-	<table  class="table" align="center" bordercolor="#800080" BORDER=10>
-			<tr bgcolor="#F0F8FF">
-				<th style="color:black" width="125" bgcolor="#F0F8FF" align="center">PRODUCT ID</th>
+	<table  class="table" align="center" bordercolor="#DEB887" BORDER=10>
+			<tr bgcolor="#DEB887">
+				<th style="color:black" width="125" bgcolor="#DEB887" align="center">PRODUCT ID</th>
 				<th style="color:black" width="125" align="center">PRODUCT NAME</th>
 				<th style="color:black" width="190" align="center">PRODUCT PRICE</th>
 				<th style="color:black" width="190" align="center">PRODUCT DESCRIPTION</th>

@@ -58,7 +58,7 @@ font-family: "Times New Roman", Times, serif;
 								<h5><span class="glyphicon glyphicon-shopping-cart"></span>Furniture Shop</h5>
 							</div>
 							<div class="col-xs-6">
-								<a href="onLoad" type="button" class="btn btn-primary btn-sm btn-block">
+								<a href="home" type="button" class="btn btn-success btn-sm btn-block">
 									<span class="glyphicon glyphicon-share-alt"></span> Continue shopping
 								</a>
 							</div>
@@ -68,10 +68,10 @@ font-family: "Times New Roman", Times, serif;
 				<div class="panel-body">
 				<c:forEach items="${cartList}" var="cart">
 					<div class="row">
-						<div class="col-xs-3"><img style="width:150px;height:100px" src="<c:url value="/resources/images/${cart.pid}.jpg"/>"/>
+						<div class="col-xs-3"><img style="width:150px;height:100px" src="<c:url value="/resources/images/${cart.p_id}.jpg"/>"/>
 						</div>
 						<div class="col-xs-3">
-							<h4  class="product-name"><strong>${cart.pname}</strong></h4><h4><small>Product description</small></h4>
+							<h4  class="product-name"><strong>${cart.p_name}</strong></h4><h4><small>Product description</small></h4>
 						</div>
 						<div class="col-xs-6">
 							<div class="col-xs-6 text-right">
@@ -93,18 +93,18 @@ font-family: "Times New Roman", Times, serif;
 					
 					
 					
-					<div class="row">
-						<div class="text-center">
-							<div class="col-xs-9">
-								<h6 class="text-right">Added items?</h6>
-							</div>
-							<div class="col-xs-3">
-								<a href="<c:url value="/myCart" />"  type="button" class="btn btn-default btn-sm btn-block">
-									Update cart
-								</a>
-							</div>
-						</div>
-					</div>
+<!-- 					<div class="row"> -->
+<!-- 						<div class="text-center"> -->
+<!-- 							<div class="col-xs-9"> -->
+<!-- 								<h6 class="text-right">Added items?</h6> -->
+<!-- 							</div> -->
+<!-- 							<div class="col-xs-3"> -->
+<%-- 								<a href="<c:url value="/myCart" />"  type="button" class="btn btn-default btn-sm btn-block"> --%>
+<!-- 									Update cart -->
+<!-- 								</a> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
 				</div>
 				<div class="panel-footer">
 					<div class="row text-center">
@@ -112,7 +112,7 @@ font-family: "Times New Roman", Times, serif;
 							<h4 class="text-right"> Total: ${sum}</h4>
 						   </div>
 						<div class="col-xs-3">
-							<a href="checkout" type="button" class="btn btn-success btn-block">
+							<a href="checkout" type="button" class="btn btn-danger btn-block">
 								Checkout
 							</a>
 						</div>

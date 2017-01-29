@@ -27,7 +27,7 @@ background-repeat:no-repeat;
 </head>
 <body>
  <div style="color:#000000;margin:40px 0px 0px 100px">
-    <a style="color:#000000;font-size:2.0em" href="onLoad"><span class="glyphicon glyphicon-home"></span></a>
+    <a style="color:#000000;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
    </div>
 <%--product list declartion  --%>	
 			

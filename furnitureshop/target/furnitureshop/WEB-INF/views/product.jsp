@@ -94,7 +94,7 @@ font-family: "Times New Roman", Times, serif;
 				<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="pid" disabled="true" readonly="true"/></td>
 			</c:when>
 			<c:otherwise>
-				<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="pid"  pattern=".{4,7}" required="true" title="id should be between 4 to 7 characters"/></td>
+				<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="pid"  pattern=".{4,7}" required="true" title="id should be between 2 to 4 characters"/></td>
 				</c:otherwise>
 				</c:choose>
 				</tr>

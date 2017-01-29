@@ -43,7 +43,7 @@ font-family: "Times New Roman", Times, serif;
 </head>
 <body>
  <div style="color:#000000;margin:20px 0px 0px 70px">
-    <a style="color:#000000;font-size:2.0em" href="onLoad"><span class="glyphicon glyphicon-home"></span></a>
+    <a style="color:#000000;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
     <h1 style="color:black"><center >PAYMENT DETAILS</center></h1>
    </div>
 
@@ -193,7 +193,7 @@ font-family: "Times New Roman", Times, serif;
                             <div class="form-group">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                    
-                                    	<a href="thanks" type="submit" class="btn btn-success btn-block">
+                                    	<a href="thanks" type="submit" class="btn btn-info btn-block">
 								Place Order
 							</a>
                                 </div>

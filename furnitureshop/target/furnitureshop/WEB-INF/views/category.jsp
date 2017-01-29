@@ -16,9 +16,10 @@
 
 <style>
 body{ 
-background-image: url(resources/images/bgk13.jpg); 
+background-image: url(resources/images/f1.jpg); 
 background-size:     cover;                      
     background-repeat:   no-repeat;
+  
  } 
  th{
     color:white;

@@ -132,7 +132,7 @@ public class ProductController{
 	public String editproduct(@PathVariable("pid") String id, Model model) {
 		System.out.println("editProduct");
 		model.addAttribute("product", this.productDAO.getProduct(id));
-		model.addAttribute("Productlist", this.productDAO.list());
+		model.addAttribute("productList", this.productDAO.list());
 		model.addAttribute("categoryList", this.categoryDAO.list());
 		model.addAttribute("supplierList", this.supplierDAO.list());
 	return "product";

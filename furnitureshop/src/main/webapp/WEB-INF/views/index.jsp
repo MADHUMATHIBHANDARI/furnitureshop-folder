@@ -14,7 +14,7 @@
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 50%;
+      width: 60%;
       margin: auto;
   }
   </style>
@@ -28,9 +28,22 @@
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-          <li><a href="aboutus.jsp">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-           <li class="divider-vertical"></li>
+       <c:forEach items="${categoryList}" var="category">
+      <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href=${category.cname}>${category.cname}<span class="caret"></span> </a>
+      <ul class="dropdown-menu">
+      <c:forEach items="${category.products}" var="product">
+      <li><a style="color:#000000" href="<c:url value='product/get/${product.pid}'/>"> ${product.pname} </a>
+    
+     </c:forEach>
+       <li><a style="color:#F5F5DC" href="#"></a></li>
+     </ul>
+      </li>       
+             
+      </c:forEach>
+      
+      <li><a style="color:#F5F5DC" href="aboutUs">CONTACT US</a></li> 
+    </ul>
        <c:if test="${pageContext.request.userPrincipal.name != null}">
       <c:if test="${pageContext.request.userPrincipal.name != 'madhu'}">
       <li><a  href="<c:url value="/myCart" />"><span class="glyphicon glyphicon-shopping-cart"></span> CART</a>${cartSize}</li>
@@ -80,7 +93,7 @@
       </div>
 
       <div class="item">
-        <img src="<c:url value="/resources/F3.jpg"/>" alt="F3" width="150" height="75">
+        <img src="<c:url value="/resources/F3.jpg"/>" alt="F3" width="200" height="200">
       </div>
 
       <div class="item">

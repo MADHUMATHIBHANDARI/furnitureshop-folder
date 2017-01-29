@@ -59,7 +59,7 @@ font-family: "Times New Roman", Times, serif;
 								<h5><span class="glyphicon glyphicon-shopping-cart"></span> REVIEW ORDER</h5>
 							</div>
 							<div class="col-xs-6">
-								<a href="<c:url value="/myCart" />" type="button" class="btn btn-primary btn-sm btn-block">
+								<a href="<c:url value="/myCart" />" type="button" class="btn btn-warning btn-sm btn-block">
 									<span class="glyphicon glyphicon-share-alt"></span> Edit cart
 								</a>
 							</div>

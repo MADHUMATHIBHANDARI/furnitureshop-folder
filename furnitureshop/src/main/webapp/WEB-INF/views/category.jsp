@@ -16,13 +16,14 @@
 
 <style>
 body{ 
-background-image: url(resources/images/bgk13.jpg); 
+background-image: url(resources/images/f1.jpg); 
 background-size:     cover;                      
     background-repeat:   no-repeat;
+  
  } 
  th{
     color:white;
-    background-color:#F0F8FF;
+    background-color:#DEB887;
     align:center;
 }
 
@@ -49,7 +50,7 @@ font-family: "Times New Roman", Times, serif;
 </style>
 </head>
 <body >
-<nav class="navbar navbar-inverse" style="margin: 20px 0px 0px 0px;background-color:#20B2AA">
+<nav class="navbar navbar-inverse" style="margin: 20px 0px 0px 0px;background-color:#D8BFD8">
   <div class="container-fluid">
     <div class="navbar-header">
       <h2 class="navbar-brand" style="color:#F5F5DC;margin:5px 0px 0px 0px">FURNITURES</h2>
@@ -85,7 +86,7 @@ font-family: "Times New Roman", Times, serif;
 <%-- form:form action="${addAction }" commandName="category"--%>
 <form:form method="POST" commandName="category" action="${addAction}">
 <table class="table table-condensed">
-	<tr bgcolor=#F0F8FF>
+	<tr bgcolor=#DEB887>
 		<td><form:label style="color:#000000" path="cid"><spring:message text="ID"/></form:label></td>
 		
 		
@@ -99,19 +100,19 @@ font-family: "Times New Roman", Times, serif;
 				</c:choose>
 				</tr>
 				
-				<tr bgcolor="#F0F8FF"> 
+				<tr bgcolor="#DEB887"> 
 				<form:input path="cid" hidden="true"/>
 				
 				<td><form:label style="color:#000000" path="cname"> <spring:message text="NAME"/></form:label></td>
         		<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="cname" required="true" /></td> 
 				</tr>
 				
-				<tr bgcolor="#F0F8FF">
+				<tr bgcolor="#DEB887">
 				<td><form:label style="color:#000000" path="cdesc" ><spring:message text="DESCRIPTION"/></form:label></td>
 				<td><form:input style="background-color:#F5F5DC;border:0.25px solid black" path="cdesc" required="true"/></td>
 				</tr>
 				
-				<tr bgcolor="#F0F8FF">
+				<tr bgcolor="#DEB887">
 				<td align="right" colspan="2"><c:if test="${!empty category.cname }">
 									<input style= "align:middle" class="btn btn-primary btn-md" type="submit" value="<spring:message text="Edit Category"/>"/>
 								</c:if>

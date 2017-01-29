@@ -26,7 +26,7 @@ background-size:     cover;
 </head>
 <body>
 <div style="color:#000000;margin:30px 0px 0px 70px">
-    <a style="color:#000000;font-size:2.0em" href="onLoad"><span class="glyphicon glyphicon-home"></span></a>
+    <a style="color:#000000;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
    </div>
 <h1 style="font-size:65px;margin:50px 0px 0px 120px">YOUR ORDER HAS BEEN RECEIVED</h1>
 <h2 style="font-size:50px;margin:30px 0px 0px 120px">Thank you for your purchase!</h2>
