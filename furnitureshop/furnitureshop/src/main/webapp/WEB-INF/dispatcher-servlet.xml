@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+      http://www.springframework.org/schema/mvc 
+      http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+       http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xmlns:context="http://www.springframework.org/schema/context"
+          xmlns:mvc="http://www.springframework.org/schema/mvc"
+           xmlns="http://www.springframework.org/schema/beans">
+
+<context:component-scan base-package="com.niit"/>
+
+
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+
+<property value="/WEB-INF/views/" name="prefix"/>
+
+<property value=".jsp" name="suffix"/>
+
+</bean>
+
+<mvc:default-servlet-handler/>
+
+<mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"/>
+
+<mvc:annotation-driven/>
+
+
+<!-- multipart initialization -->
+
+
+
+<bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">
+
+<!-- setting maximum upload size -->
+
+
+<property name="maxUploadSize" value="10000000"/>
+
+</bean>
+
+
+</beans>
+
+

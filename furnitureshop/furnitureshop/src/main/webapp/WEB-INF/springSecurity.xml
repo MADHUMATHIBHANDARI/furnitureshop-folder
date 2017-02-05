@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/security 
+http://www.springframework.org/schema/security/spring-security.xsd" xmlns:security="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+
+
+
+<!-- New Spring Security implementation --> 
+<security:http auto-config="true" use-expressions="true"> 
+<security:intercept-url access="hasRole('ROLE_ADMIN')" pattern="/admin"/> 
+<security:intercept-url access="hasRole('ROLE_USER')" pattern="/user"/> 
+
+<security:intercept-url access="hasRole('ROLE_USER')" pattern="/cart/add/{p_id}"/>
+<security:form-login login-processing-url="/j_spring_security_check" password-parameter="password" username-parameter="username" authentication-failure-url="/login?error" default-target-url="/" login-page="/login"/>
+
+<security:logout logout-url="/j_spring_security_logout" logout-success-url="/login?logout"/> 
+
+<!-- enable csrf protection  -->
+<security:csrf disabled="true"/> 
+</security:http> 
+<security:authentication-manager> 
+<security:authentication-provider> 
+
+<security:jdbc-user-service data-source-ref="dataSource" users-by-username-query="SELECT name, password, id FROM User WHERE name = ?" authorities-by-username-query="SELECT name,role,id From User WHERE name = ?" />
+</security:authentication-provider>
+</security:authentication-manager>
+</beans>
