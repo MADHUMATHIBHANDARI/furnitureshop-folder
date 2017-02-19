@@ -46,6 +46,7 @@ public class HomeController {
 		model.addAttribute("categoryList",this.categoryDAO.list());
 		return "index";
 	}
+	
 	@RequestMapping("/register")
 	public ModelAndView getRegister(Model m)
 	{
@@ -70,6 +71,13 @@ public class HomeController {
 	public String getUser()
 	{
 		return "login";
+	}
+	@RequestMapping("/aboutUs")
+	public String getaboutus()
+	{
+		
+		//m.addAttribute("categoryList",this.categoryDAO.list());
+		return "aboutUs";
 	}
 	
 	@RequestMapping(value="/login")

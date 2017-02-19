@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Index page</title>
  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,7 +14,7 @@
   <style>
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 60%;
+      width: 80%;
       margin: auto;
   }
   </style>
@@ -27,7 +27,7 @@
       <a class="navbar-brand" href="#">FURNITURE SHOP</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><a href="home">Home</a></li>
        <c:forEach items="${categoryList}" var="category">
       <li class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href=${category.cname}>${category.cname}<span class="caret"></span> </a>
@@ -85,19 +85,19 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="<c:url value="/resources/F1.jpg"/>" alt="F1" width="200" height="200">
+        <img src="<c:url value="/resources/F1.jpg"/>" alt="F1" width="200px" height="200px">
       </div>
 
       <div class="item">
-        <img src="<c:url value="/resources/F2.jpg"/>" alt="F2" width="200" height="200">
+        <img src="<c:url value="/resources/bedroom.jpg"/>" alt="F2" width="500px" height="500px">
       </div>
 
       <div class="item">
-        <img src="<c:url value="/resources/F3.jpg"/>" alt="F3" width="200" height="200">
+        <img src="<c:url value="/resources/sofa.jpg"/>" alt="F3" width="200px" height="50px">
       </div>
 
       <div class="item">
-        <img src="<c:url value="/resources/F4.jpg"/>" alt="F4" width="200" height="200">
+        <img src="<c:url value="/resources/sofared.jpg"/>" alt="F4" width="200px" height="200px">
       </div>
     </div>
 

@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
    <%@ page isELIgnored="false" %>
     <%@ taglib  prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
+    <%@ include file="header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,7 +14,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 <title>Insert title here</title>
@@ -50,7 +51,7 @@ font-family: "Times New Roman", Times, serif;
 	<c:if test="${!empty cartList}">
 	<div class="row">
 		<div class="col-xs-8">
-			<div class="panel panel-info" >
+			<div class="panel panel-success" >
 				<div class="panel-heading">
 					<div class="panel-title">
 					<div class="row">
@@ -58,7 +59,7 @@ font-family: "Times New Roman", Times, serif;
 								<h5><span class="glyphicon glyphicon-shopping-cart"></span>Furniture Shop</h5>
 							</div>
 							<div class="col-xs-6">
-								<a href="home" type="button" class="btn btn-primary btn-sm btn-block">
+								<a href="home" type="button" class="btn btn-success btn-sm btn-block">
 									<span class="glyphicon glyphicon-share-alt"></span> Continue shopping
 								</a>
 							</div>
@@ -112,7 +113,7 @@ font-family: "Times New Roman", Times, serif;
 							<h4 class="text-right"> Total: ${sum}</h4>
 						   </div>
 						<div class="col-xs-3">
-							<a href="checkout" type="button" class="btn btn-success btn-block">
+							<a href="checkout" type="button" class="btn btn-danger btn-block">
 								Checkout
 							</a>
 						</div>

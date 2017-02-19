@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ include file="header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,9 +18,9 @@
 <title>Insert title here</title>
 <style>
 body{
-background-image: url(resources/images/cart9.jpg);
-background-size:     cover;                      
-    background-repeat:   no-repeat;
+background-image: url(resources/outdoor.jpg);
+background-size:500px;                      
+    background-repeat: repeat;
 
 }
 th{
@@ -50,13 +51,13 @@ font-family: "Times New Roman", Times, serif;
 <div class="container" style="align:center; margin: 20px 0px 0px 0px">
            
             <div class="row cart-body" style="align:center; margin: 0px 230px 0px 0px">
-                <form class="form-horizontal" method="post" action="">
+                <form class="form-horizontal" method="post" action="thanks">
               
                  
                
                 <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 col-md-push-6 col-sm-push-6">
                     <!--SHIPPING METHOD-->
-                    <div class="panel panel-info">
+                    <div class="panel panel-warning">
                         <div class="panel-heading">Address</div>
                         <div class="panel-body">
                             <div class="form-group">
@@ -67,57 +68,57 @@ font-family: "Times New Roman", Times, serif;
                             <div class="form-group">
                                 <div class="col-md-12"><strong>Country:</strong></div>
                                 <div class="col-md-12">
-                                    <input type="text" class="form-control" required="true" name="country" value="" />
+                                    <input type="text" class="form-control" required="true" name="country" value="" required="true"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-6 col-xs-12">
                                     <strong>First Name:</strong>
-                                    <input type="text" name="first_name" class="form-control" value="" />
+                                    <input type="text" name="first_name" class="form-control" "value="" required="true" />
                                 </div>
                                 <div class="span1"></div>
                                 <div class="col-md-6 col-xs-12">
                                     <strong>Last Name:</strong>
-                                    <input type="text" name="last_name" class="form-control" value="" />
+                                    <input type="text" name="last_name" class="form-control" value="" required="true"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12"><strong>Address:</strong></div>
                                 <div class="col-md-12">
-                                    <input type="text" name="address" class="form-control" value="" />
+                                    <input type="text" name="address" class="form-control" value="" required="true" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12"><strong>City:</strong></div>
                                 <div class="col-md-12">
-                                    <input type="text" name="city" class="form-control" value="" />
+                                    <input type="text" name="city" class="form-control" value="" required="true"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12"><strong>State:</strong></div>
                                 <div class="col-md-12">
-                                    <input type="text" name="state" class="form-control" value="" />
+                                    <input type="text" name="state" class="form-control" value="" required="true"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12"><strong>Zip / Postal Code:</strong></div>
                                 <div class="col-md-12">
-                                    <input type="text" name="zip_code" class="form-control" value="" />
+                                    <input type="text" name="zip_code" class="form-control" pattern="[0-9]{6}" value="" required="true"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12"><strong>Phone Number:</strong></div>
-                                <div class="col-md-12"><input type="text" name="phone_number" class="form-control" value="" /></div>
+                                <div class="col-md-12"><input type="text" name="phone_number" class="form-control" pattern="[0-9]{10}" value="" required="true"/></div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12"><strong>Email Address:</strong></div>
-                                <div class="col-md-12"><input type="text" name="email_address" class="form-control" value="" /></div>
+                                <div class="col-md-12"><input type="email" name="email_address" class="form-control" value="" required="true"/></div>
                             </div>
                         </div>
                     </div>
                     <!--SHIPPING METHOD END-->
                     <!--CREDIT CART PAYMENT-->
-                    <div class="panel panel-info">
+                    <div class="panel panel-warning">
                         <div class="panel-heading"><span><i class="glyphicon glyphicon-lock"></i></span> Secure Payment</div>
                         <div class="panel-body">
                             <div class="form-group">
@@ -133,11 +134,11 @@ font-family: "Times New Roman", Times, serif;
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12"><strong>Credit Card Number:</strong></div>
-                                <div class="col-md-12"><input type="text" class="form-control" name="car_number" value="" /></div>
+                                <div class="col-md-12"><input type="text" class="form-control" name="car_number" pattern="[0-9]{12}" value="" required="true"/></div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12"><strong>Card CVV:</strong></div>
-                                <div class="col-md-12"><input type="text" class="form-control" name="car_code" value="" /></div>
+                                <div class="col-md-12"><input type="password" class="form-control" name="car_code" pattern="[0-9]{3}" value="" required="true"/></div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
@@ -192,9 +193,9 @@ font-family: "Times New Roman", Times, serif;
                             </div>
                             <div class="form-group">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                   
-                                    	<a href="thanks" type="submit" class="btn btn-info btn-block">
-								Place Order
+                                  <input type="submit" class="btn btn-info" value="place order">
+<!--                                     	<a href="thanks" type="submit" class="btn btn-info btn-block"> -->
+								
 							</a>
                                 </div>
                             </div>

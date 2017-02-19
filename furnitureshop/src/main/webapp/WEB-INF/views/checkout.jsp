@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     <%@page isELIgnored="false" %>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <%@ include file="header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -20,8 +21,8 @@
 </head>
 <style>
 body{
-background-image: url(resources/images/cart9.jpg);
-background-size:     cover;                      
+background-image: url(resources/sofared.jpg);
+background-size:1500px;                      
     background-repeat:   no-repeat;
 
 }
@@ -51,7 +52,7 @@ font-family: "Times New Roman", Times, serif;
 	<c:if test="${!empty cartList}">
 	<div class="row">
 		<div class="col-xs-8">
-			<div class="panel panel-info">
+			<div class="panel panel-warning">
 				<div class="panel-heading">
 					<div class="panel-title">
 					<div class="row">

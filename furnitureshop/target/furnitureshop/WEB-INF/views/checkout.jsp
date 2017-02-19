@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     <%@page isELIgnored="false" %>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <%@ include file="header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -51,7 +52,7 @@ font-family: "Times New Roman", Times, serif;
 	<c:if test="${!empty cartList}">
 	<div class="row">
 		<div class="col-xs-8">
-			<div class="panel panel-info">
+			<div class="panel panel-warning">
 				<div class="panel-heading">
 					<div class="panel-title">
 					<div class="row">
@@ -59,7 +60,7 @@ font-family: "Times New Roman", Times, serif;
 								<h5><span class="glyphicon glyphicon-shopping-cart"></span> REVIEW ORDER</h5>
 							</div>
 							<div class="col-xs-6">
-								<a href="<c:url value="/myCart" />" type="button" class="btn btn-primary btn-sm btn-block">
+								<a href="<c:url value="/myCart" />" type="button" class="btn btn-warning btn-sm btn-block">
 									<span class="glyphicon glyphicon-share-alt"></span> Edit cart
 								</a>
 							</div>

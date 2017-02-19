@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ include file="header.jsp" %>
 
 <!--  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
 <!DOCTYPE html >
@@ -16,14 +17,13 @@
 <style>
 body
 { 
-background-image: url(resources/images/bgk19.jpg); 
-background-size:     cover;                      
+background-image: url(resources/sofa.jpg); 
+background-size:1300px;                      
     background-repeat:   no-repeat;
-    background-color: yellow;
-   
- } 
- 
-</style>
+/*     background-color: yellow;   */
+/*       background-image: url("/resources/two seater backless.jpg"); */
+} 
+ </style> 
 <body>
  
    <div style="color:#000000;margin:40px 0px 0px 100px">
@@ -58,8 +58,8 @@ background-size:     cover;
 			 <div class="row">
 				<div class="col-xs-12">
 					<div class="form-group">
-						<input style="background-color:#FFFFE0" type="password"  name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="2" />
-						  <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+					<input style="background-color:#FFFFE0" type="password"  name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="2" />
+					 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>	 
 					</div>
 				</div>
 				<div class="col-sm-12 ">

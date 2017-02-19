@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ include file="header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,6 +25,8 @@ background-size:     cover;
 </head>
 <body>
 
+
+<!-- <h1> Welcome to CONTACT US PAGE....</h1> -->
 
 <div class="jumbotron jumbotron-sm" style="background:#000000">
     <div class="container">
@@ -99,7 +102,7 @@ background-size:     cover;
             </address>
             <address>
                 <strong>Full Name</strong><br>
-                <a href="mailto:#">first.last@example.com</a>
+                <a href="mailto:#">abcd@gmail.com</a>
             </address>
             </form>
         </div>
