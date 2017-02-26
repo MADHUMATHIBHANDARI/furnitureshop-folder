@@ -18,9 +18,10 @@
 <title>Insert title here</title>
 <style>
 body{
-background-image: url(resources/outdoor.jpg);
-background-size:500px;                      
-    background-repeat: repeat;
+background-image: url(resources/visa.jpg);
+background-size:500px;   
+background-color:antiquewhite;                   
+    background-repeat:repeat-y;
 
 }
 th{
@@ -43,8 +44,8 @@ font-family: "Times New Roman", Times, serif;
 </style>
 </head>
 <body>
- <div style="color:#000000;margin:20px 0px 0px 70px">
-    <a style="color:#000000;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
+ <div style="color:#EEE8AA;margin:20px 0px 0px 70px">
+    <a style="color:#EEE8AA;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
     <h1 style="color:black"><center >PAYMENT DETAILS</center></h1>
    </div>
 
@@ -134,7 +135,7 @@ font-family: "Times New Roman", Times, serif;
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12"><strong>Credit Card Number:</strong></div>
-                                <div class="col-md-12"><input type="text" class="form-control" name="car_number" pattern="[0-9]{12}" value="" required="true"/></div>
+                                <div class="col-md-12"><input type="text" class="form-control" name="car_number" pattern="[0-9]{16}" value="" required="true"/></div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12"><strong>Card CVV:</strong></div>
@@ -207,8 +208,12 @@ font-family: "Times New Roman", Times, serif;
                 </form>
             </div>
             <div class="row cart-footer">
+          
         
             </div>
     </div>
 </body>
 </html>
+<br>
+<br>
+  <%@ include file="footer.jsp" %>

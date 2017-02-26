@@ -27,7 +27,7 @@
       <a class="navbar-brand" href="#">FURNITURE SHOP</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+<!--       <li class="active"><a href="#">Home</a></li> -->
        <c:forEach items="${categoryList}" var="category">
       <li class="dropdown">
       <a class="dropdown-toggle" data-toggle="dropdown" href=${category.cname}>${category.cname}<span class="caret"></span> </a>

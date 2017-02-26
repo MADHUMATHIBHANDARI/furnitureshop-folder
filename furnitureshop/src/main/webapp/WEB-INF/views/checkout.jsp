@@ -45,6 +45,9 @@ font-family: "Times New Roman", Times, serif;
 
 </style>
 <body>
+  <div class="col-xs-2 col-md-3" style="color:#EEE8AA;margin:0px 100px 0px 100px">
+               <a style="color:#EEE8AA;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
+     </div>
 
 <h1 style="color:black"><center>REVIEW ORDER</center></h1>
 <div class="container" style="align:center; margin: 20px 100px 0px 400px">
@@ -116,3 +119,4 @@ font-family: "Times New Roman", Times, serif;
 
 </body>
 </html>
+<%@ include file="footer.jsp" %>

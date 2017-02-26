@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ include file="header.jsp" %>
+<%--     <%@ include file="header.jsp" %> --%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -16,9 +16,10 @@
 <title>About Us</title>
 <style>
 body{ 
-background-image: url(resources/images/bgk19.jpg); 
-background-size:     cover;                      
-    background-repeat:   no-repeat;
+background-image: url(resources/contact.jpg); 
+background-size: 200px;  
+background-repeat:   no-repeat;
+background-position:right bottom; 
  } 
 
 </style>
@@ -37,7 +38,7 @@ background-size:     cover;
             <div class="col-xs-4 col-md-8">
             
                 <h1 class="h1" style="color:#EEE8AA;display:inline">
-                    Contact us <small style="color:#EEE8AA">Feel free to contact us</small></h1>
+                   <small style="color:#EEE8AA">Feel free to contact us</small></h1>
             </div>
         </div>
     </div>
@@ -94,15 +95,15 @@ background-size:     cover;
             <legend style="color:#000000"><span style="color:#000000"  class="glyphicon glyphicon-globe"></span> Our office</legend>
             <address>
                 <strong style="color:#000000">Twitter, Inc.</strong><br>
-                795 Folsom Ave, Suite 600<br>
-                San Francisco, CA 94107<br>
+                795 8TH CROSS, MALLESHWARAM<br>
+                BANGALORE-560055<br>
                 <abbr title="Phone">
                     P:</abbr>
-                (123) 456-7890
+               080-24689752
             </address>
             <address>
-                <strong>Full Name</strong><br>
-                <a href="mailto:#">abcd@gmail.com</a>
+                <strong>MADHUMATHI R</strong><br>
+                <a href="mailto:#">rmadhumathi96@gmail.com</a>
             </address>
             </form>
         </div>

@@ -14,7 +14,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
-<!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
 <title>Insert title here</title>
@@ -45,6 +45,9 @@ font-family: "Times New Roman", Times, serif;
 
 </style>
 <body>
+  <div class="col-xs-2 col-md-3" style="color:#EEE8AA;margin:0px 100px 0px 100px">
+               <a style="color:#EEE8AA;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
+     </div>
 	<h1 style="color:black"><center >CART LIST</center></h1>
 	<div class="container" style="align:center; margin: 20px 100px 0px 400px">
 	
@@ -127,3 +130,8 @@ font-family: "Times New Roman", Times, serif;
 
 </body>
 </html>
+<br>
+<br>
+<br>
+<br>
+<%@ include file="footer.jsp" %>

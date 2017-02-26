@@ -18,21 +18,22 @@
 <title>Insert title here</title>
 <style>
 body{
-background-image:url(resources/images/cart9.jpg);
+background-image:url(resources/cart9.jpg);
 background-size: cover;                      
 background-repeat:no-repeat;
+/* background-color:aqua; */
 
 }
 
 </style>
 </head>
 <body>
- <div style="color:#000000;margin:40px 0px 0px 100px">
-    <a style="color:#000000;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
-   </div>
+   <div class="col-xs-2 col-md-3" style="color:#EEE8AA;margin:0px 100px 0px 100px">
+               <a style="color:#EEE8AA;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
+     </div>
 <%--product list declartion  --%>	
 			
-			<div class="container" style="align:center;margin:30px 0px 0px 180px">
+			<div class="container" style="align:center;margin:60px 0px 0px 480px">
 			<div class="row">
 				<c:if test="${!empty selectedProduct.pname}">
 				  <div class="col-md-10 col-md-offset-1">
@@ -83,3 +84,4 @@ background-repeat:no-repeat;
 
 </body>
 </html>
+<%@ include file="footer.jsp" %>

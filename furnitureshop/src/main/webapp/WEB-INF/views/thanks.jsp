@@ -17,8 +17,8 @@
 <title>Insert title here</title>
 <style>
 body{
-background-image: url(resources/images/bgk19.jpg);
-background-size:     cover;                      
+background-image: url(resources/image.jpg);
+background-size: 1350px;                      
     background-repeat:   no-repeat;
 
 }
@@ -28,7 +28,7 @@ background-size:     cover;
 <div style="color:#000000;margin:30px 0px 0px 70px">
     <a style="color:#000000;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
    </div>
-<h1 style="font-size:65px;margin:50px 0px 0px 120px">YOUR ORDER HAS BEEN RECEIVED</h1>
+<h1 style="font-size:60px;margin:50px 0px 0px 120px">YOUR ORDER HAS BEEN RECEIVED</h1>
 <h2 style="font-size:50px;margin:30px 0px 0px 120px">Thank you for your purchase!</h2>
 </body>
 </html>

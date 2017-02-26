@@ -20,6 +20,8 @@ body{
 background-image: url(resources/images/bgk13.jpg); 
 background-size:     cover;                      
     background-repeat:   no-repeat;
+    background-color:palegoldenrod;
+   
  } 
  th{
     color:white;
@@ -50,6 +52,9 @@ font-family: "Times New Roman", Times, serif;
 </style>
 </head>
 <body >
+  <div class="col-xs-2 col-md-3" style="color:#000000;margin:0px 100px 0px 100px">
+               <a style="color:#000000;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
+     </div>
 <!-- <nav class="navbar navbar-inverse" style="margin: 20px 0px 0px 0px;background-color:#D8BFD8"> -->
 <!--   <div class="container-fluid"> -->
 <!--     <div class="navbar-header"> -->

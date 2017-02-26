@@ -55,3 +55,8 @@ background-size:1300px;
 
 </body>
 </html>
+<br>
+<br>
+<br>
+<br>
+  <%@ include file="footer.jsp" %>

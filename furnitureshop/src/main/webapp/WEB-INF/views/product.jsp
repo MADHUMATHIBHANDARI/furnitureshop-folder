@@ -17,12 +17,14 @@
 
 <style>
 body{ 
+
 background-image: url(resources/images/bgk13.jpg); 
 background-size:     cover;                      
     background-repeat:   no-repeat;
+    background-color:palegoldenrod;
  } 
  th{
-    color:white;
+    color:WHITE;
     background-color:#DEB887;
     align:center;
 }
@@ -33,6 +35,7 @@ table, th, td {
    
     
 }
+ 
 /* .btn {
     background-color:#cc0052 ;
     } */
@@ -50,6 +53,9 @@ font-family: "Times New Roman", Times, serif;
 </style>
 </head>
 <body >
+  <div class="col-xs-2 col-md-3" style="color:#000000;margin:0px 100px 0px 100px">
+               <a style="color:#000000;font-size:2.0em" href="home"><span class="glyphicon glyphicon-home"></span></a>
+     </div>
 <!-- <nav class="navbar navbar-inverse" style="margin: 20px 0px 0px 0px;background-color:#D8BFD8"> -->
 <!--   <div class="container-fluid"> -->
 <!--     <div class="navbar-header"> -->
@@ -148,7 +154,7 @@ font-family: "Times New Roman", Times, serif;
 <br>
 <div class="container">
 
-<h3><center>Product LIST</center></h3>
+<h3><center>PRODUCT LIST</center></h3>
 <br>
 <c:if test="${!empty productList}">
 	<table  class="table" align="center" bordercolor="#DEB887" BORDER=10>
